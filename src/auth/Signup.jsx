@@ -1,10 +1,10 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { AuthContext } from "./AuthProvider";
 
 
 export const Signup = () => {
 
-    const { signup}  = useContext(AuthContext);
+    const { signup }  = useContext(AuthContext);
 
 
     const handleSignup = (e) => {

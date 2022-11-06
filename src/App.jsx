@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./auth/AuthProvider";
 import { Signup } from "./auth/Signup";
 import { Login } from "./auth/Login";
-import { Home } from "./components/Home";
+import { PrivateRoute } from "./auth/PrivateRoute";
+
 
 
 function App() {
@@ -10,15 +11,15 @@ function App() {
 
   return (
     <div className="App">
-      <AuthProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <AuthProvider>
           <Routes>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/home" element={<PrivateRoute/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/login" element={<Login/>}/>
           </Routes>
-        </BrowserRouter> 
-      </AuthProvider>
+        </AuthProvider>
+      </BrowserRouter> 
     </div>
   );
 }

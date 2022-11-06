@@ -1,0 +1,37 @@
+.container {
+    width: 100%;
+    margin: 0;
+}
+
+.formstyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    width: 25%;
+    display: flex;
+}
+
+.option p {
+    text-align: center;
+}
+
+.text {
+    width: 25%;
+}
+
+.amount {
+    width: 25%;
+}
+
+.btn {
+    width: 25%;
+}
+
+label {
+    text-align: center;
+    font-size: 18px;
+}
+

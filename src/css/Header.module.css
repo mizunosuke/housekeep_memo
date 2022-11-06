@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.signoutbtn {
+    width: 15%; 
+}
+
+.prevbtn {
+    width: 15%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.prevbtn button {
+    display: block; 
+}
+
+.time {
+    width: 35%;
+    text-align: center;
+}
+
+.nextbtn {
+    width: 15%;
+}
+
+.userad {
+    width: 20%;
+}  
+ 
+.image {
+    width:100%;
+    margin: 0;
+}
+
+
+
