@@ -1,14 +1,17 @@
 import { Incomeitems } from "./Incomeitems";
 import { Expenseitems } from "./Expenseitems";
+import styles from "../../css/ItemLists.module.css";
 
 
 export const ItemLists = ({incomeItems,expenseItems,selectedMonth,thisMonth,deleteIncomeItem,deleteExpenseItem}) => {
     
 
     return (
-        <div>
-            <div>
-                <div><h3>収入一覧</h3></div>
+        <div className={styles.container}>
+            <div className={styles.incomeItem}>
+                <div className={styles.title}>
+                    <h3>収入一覧</h3>
+                </div>
                 <ul>
                     {incomeItems.map((incomeItem)=>(
                         <Incomeitems
@@ -25,8 +28,10 @@ export const ItemLists = ({incomeItems,expenseItems,selectedMonth,thisMonth,dele
             </div>
 
 
-            <div>
-                <div><h3>支出一覧</h3></div>
+            <div className={styles.expenseItem}>
+                <div className={styles.title}>
+                    <h3>支出一覧</h3>
+                </div>
                 <ul>
                     {expenseItems.map((expenseItem)=>(
                         <Expenseitems

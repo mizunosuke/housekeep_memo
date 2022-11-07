@@ -157,26 +157,30 @@ export const Home = () => {
     //コレクションから各ドキュメントのamountのみ取得
     //incomeAmount編
     const getIncomeAmount = () => {
-        const q = query(collection(db, "IncomeItems"), where("uid", "==", currentUser.uid));
+        const q = query(collection(db, 'IncomeItems'), where('uid', '==', currentUser.uid), orderBy('date'), startAt(startOfMonth(date)), endAt(endOfMonth(date)));
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
-        const amountData= [];
-        querySnapshot.forEach((doc) => {
-        amountData.push(doc.data().amount);
-        });
-        setIncomeAmount(amountData);
-        });
+            const amountData = [];
+            console.log(querySnapshot.docs);
+            querySnapshot.forEach((doc) => {
+                amountData.push(doc.data().amount);
+            });
+            console.log(amountData);
+            setIncomeAmount(amountData);
+          });
     }
 
     //expenseAmount編
     const getExpenseAmount = () => {
-        const q = query(collection(db, "ExpenseItems"), where("uid", "==", currentUser.uid));
+        const q = query(collection(db, 'ExpenseItems'), where('uid', '==', currentUser.uid), orderBy('date'), startAt(startOfMonth(date)), endAt(endOfMonth(date)));
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
-        const amountData= [];
-        querySnapshot.forEach((doc) => {
-        amountData.push(doc.data().amount);
-        });
-        setExpenseAmount(amountData);
-        });
+            const amountData = [];
+            console.log(querySnapshot.docs);
+            querySnapshot.forEach((doc) => {
+                amountData.push(doc.data().amount);
+            });
+            console.log(amountData);
+            setExpenseAmount(amountData);
+          });
     }
 
 

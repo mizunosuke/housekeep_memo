@@ -1,4 +1,5 @@
-
+import styles from "../css/ShowIncExp.module.css";
+import { FaMoneyCheckAlt } from "react-icons/fa";
 
 export const ShowIncExp = ({incomeAmount,expenseAmount}) => {
 
@@ -17,13 +18,13 @@ export const ShowIncExp = ({incomeAmount,expenseAmount}) => {
     const balance = incomeTotalAmount - expenseTotalAmount;
 
     return (
-        <div>
-            <div>
-                <p>残高: {balance}</p>
+        <div className={styles.container}>
+            <div className={styles.balance}>
+                <h2><span><FaMoneyCheckAlt/></span>今月の残高 : {balance}円</h2>
             </div>
-            <div>
-                <p>収入合計{incomeTotalAmount}円</p>
-                <p>支出合計{expenseTotalAmount}円</p>
+            <div className={styles.incexp}>
+                <p className={styles.incometext}>収入合計 : {incomeTotalAmount}円</p>
+                <p className={styles.exptext}>支出合計 : {expenseTotalAmount}円</p>
             </div>
         </div>
     )

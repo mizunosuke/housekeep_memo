@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from "../../css/ExpenseItems.module.css";
 
 export const Expenseitems = ({expenseItem,selectedMonth,thisMonth,expenseText,expenseAmount,deleteExpenseItem}) => {
 
@@ -11,27 +12,23 @@ export const Expenseitems = ({expenseItem,selectedMonth,thisMonth,expenseText,ex
     //現在の月が表示されている時
     const currentLists = () => {
         return (
-            <div>
-                <li>
-                <div>{expenseText}</div>
-                <div>{Number(expenseAmount).toLocaleString()}円</div>
-                <div>
-                    <button onClick={handleDelete}>削除</button>
-                </div>
-            </li>
-            </div>
+                <li className={styles.list}>
+                    <div className={styles.expensetext}>{expenseText}</div>
+                    <div className={styles.expenseamount}>{Number(expenseAmount).toLocaleString()}円</div>
+                    <div className={styles.deletelist}>
+                        <button onClick={handleDelete}><a href="#" className={styles.btn02}>削除</a></button>
+                    </div>
+                 </li>
           )
     }
 
     //過去の月が表示されている時
     const pastLists = () => {
         return (
-            <div>
-                <li>
-                <div>{expenseText}</div>
-                <div>{Number(expenseAmount).toLocaleString()}円</div>
+                <li className={styles.list}>
+                <div className={styles.expensetext}>{expenseText}</div>
+                <div className={styles.expenseamount}>{Number(expenseAmount).toLocaleString()}円</div>
             </li>
-            </div>
         )
     }
 

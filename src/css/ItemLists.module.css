@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.incomeItem {
+    width: 50%;
+    height: 50vh;
+}
+
+.expenseItem {
+    width: 50%;
+    height: 50vh;
+}
+
+.title {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title h3 {
+    text-align: center;
+    font-size: 28px;
+}

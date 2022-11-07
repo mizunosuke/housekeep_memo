@@ -48,10 +48,13 @@ export const InputItems = ({addIncome,addExpense,inputText,setInputText,inputAmo
                 <form className={styles.formstyle}>
                     <div className={styles.option}>
                         <p>収支</p>
-                        <select onChange={handleType}>
-                            <option value="inc">収入</option>
-                            <option value="exp">支出</option>
-                        </select>
+                        <div className={styles.selectbox}>
+                            <select onChange={handleType}>
+                                <option selected disabled>選択してください</option>
+                                <option value="inc">収入</option>
+                                <option value="exp">支出</option>
+                            </select>
+                        </div>
                     </div>
     
                     <div className={styles.text}>
@@ -63,8 +66,8 @@ export const InputItems = ({addIncome,addExpense,inputText,setInputText,inputAmo
                         <label>金額</label>
                             <input type="number" value={inputAmount} onChange={handleChangeAmount}/>
                     </div>
-                    <div className={styles.btn}>
-                        <input type="submit" value="追加" onClick={handleSubmit}/>
+                    <div className={styles.addbtn}>
+                            <input className={styles.submitbtn} type="submit" value="追加" onClick={handleSubmit}/>
                     </div>
                 </form>
             </div>

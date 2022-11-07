@@ -1,5 +1,7 @@
 import { useContext } from "react"
 import { AuthContext } from "./AuthProvider";
+import styles from "../css/Signup.module.css";
+import image from  "../images/signup.png";
 
 
 export const Signup = () => {
@@ -21,18 +23,29 @@ export const Signup = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSignup}>
-                <div>
+        <div className={styles.container}>
+            <form onSubmit={handleSignup} className={styles.form}>
+                <div className={styles.title}>
+                    <h1>Sign Up</h1>
+                </div>
+                <div className={styles.image}>
+                    <img src={image} alt="" />
+                </div>
+                <div className={styles.input_email}>
                     <label htmlFor="">メールアドレス</label>
                     <input type="text" name="email" onChange={handleChange}/>
                 </div>
-                <div>
+                <div className={styles.input_password}>
                     <label htmlFor="">パスワード</label>
                     <input type="text" name="password" onChange={handleChange}/>
                 </div>
-                <button type="submit">登録</button>
-            </form>            
+                <div className={styles.submitbtn}>
+                    <button type="submit"><a className={styles.btn02}>登録</a></button>
+                </div>
+                <div className={styles.gotologin}>
+                    <a href="/login" className={styles.btn03}>ログイン画面へ</a>
+                </div> 
+            </form>           
         </div>
     )
 }

@@ -1,34 +1,117 @@
 .container {
-    width: 100%;
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px solid #808080;
 }
 
 .formstyle {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .option {
-    width: 25%;
+    width: 30%;
     display: flex;
+    justify-content: center;
 }
 
 .option p {
     text-align: center;
+    margin-right: 40px;
+    font-size: 21px;
+    font-weight: bold;
 }
 
+.selectbox {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    /* 初期化 */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    padding: 0 10px;
+    height: 40px;
+    width: 200px;
+    position: relative;
+    background: #cfcedb no-repeat right 10px center / 16px auto;
+  }
+  
+  option[selected][disabled] {
+    display: none;
+  }
+
 .text {
-    width: 25%;
+    width: 30%;
+}
+
+.text label {
+    width: 100%;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.text input {
+    display: inline-block;
+    width: 200px;
+    margin-left: 25px;
+    height: 30px;
+    font-size: 18px;
+    border: solid 2px #000000;
 }
 
 .amount {
-    width: 25%;
+    width: 20%;
 }
 
-.btn {
-    width: 25%;
+.amount label {
+    width: 100%;
+    font-size: 21px;
+    font-weight: bold;
 }
+
+.amount input {
+    display: inline-block;
+    width: 150px;
+    margin-left: 25px;
+    height: 30px;
+    font-size: 18px;
+    border: solid 2px #000000;
+}
+
+.addbtn {
+    width: 20%;
+}
+
+.addbtn input {
+    display: inline-block;
+    width: 100px;
+    height: 40px; 
+    font-size: 18px;
+    background: #000000;
+    border-radius: 4px;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+    box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+    -webkit-transition: .12s;
+    transition: .12s;
+    font-weight: bold;
+}
+
+.addbtn input:hover {
+    background: #ffffff;
+    border: solid 2px #000000;
+    color: #000000;
+    opacity: 0.8;
+  }
 
 label {
     text-align: center;

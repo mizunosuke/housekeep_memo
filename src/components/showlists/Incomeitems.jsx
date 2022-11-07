@@ -1,5 +1,5 @@
 
-
+import styles from "../../css/IncomeItems.module.css";
 
 export const Incomeitems = ({incomeItem,selectedMonth,thisMonth,incomeText,incomeAmount,deleteIncomeItem}) => {
 
@@ -9,11 +9,11 @@ export const Incomeitems = ({incomeItem,selectedMonth,thisMonth,incomeText,incom
 
     const currentLists = () => {
         return (
-            <li>
-                <div>{incomeText}</div>
-                <div>{Number(incomeAmount).toLocaleString()}円</div>
-                <div>
-                    <button onClick={handleDelete}>削除</button>
+            <li className={styles.list}>
+                <div className={styles.incometext}>{incomeText}</div>
+                <div className={styles.incomeamount}>{Number(incomeAmount).toLocaleString()}円</div>
+                <div className={styles.deletelist}>
+                    <button onClick={handleDelete}><a href="#" className={styles.btn02}>削除</a></button>
                 </div>
             </li>
           )
@@ -21,9 +21,9 @@ export const Incomeitems = ({incomeItem,selectedMonth,thisMonth,incomeText,incom
 
     const pastLists = () => {
         return (
-            <li>
-                <div>{incomeText}</div>
-                <div>{Number(incomeAmount).toLocaleString()}円</div>
+            <li className={styles.list}>
+                <div className={styles.incometext}>{incomeText}</div>
+                <div className={styles.incomeamount}>{Number(incomeAmount).toLocaleString()}円</div>
             </li>
         )
     }

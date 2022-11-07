@@ -3,6 +3,7 @@ import { AuthProvider } from "./auth/AuthProvider";
 import { Signup } from "./auth/Signup";
 import { Login } from "./auth/Login";
 import { PrivateRoute } from "./auth/PrivateRoute";
+import { Welcome } from "./components/Welcome";
 
 
 
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <AuthProvider>
           <Routes>
+            <Route path="/" element={<Welcome/>} />
             <Route path="/home" element={<PrivateRoute/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/login" element={<Login/>}/>

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
-
+import styles from "../css/Login.module.css";
+import image from  "../images/login.png";
 
 export const Login = () => {
 
@@ -24,17 +25,28 @@ export const Login = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleLogin}>
-                <div>
+        <div className={styles.container}>
+            <form onSubmit={handleLogin} className={styles.form}>
+                <div className={styles.title}>
+                    <h1>Log In</h1>
+                </div>
+                <div className={styles.image}>
+                    <img src={image} alt="" />
+                </div>
+                <div className={styles.input_email}>
                     <label htmlFor="">メールアドレス</label>
                     <input type="text" name="email" onChange={handleChange}/>
                 </div>
-                <div>
+                <div className={styles.input_password}>
                     <label htmlFor="">パスワード</label>
                     <input type="text" name="password" onChange={handleChange}/>
                 </div>
-                <button type="submit">ログイン</button>
+                <div className={styles.submitbtn}>
+                    <button type="submit"><a className={styles.btn02}>ログイン</a></button>
+                </div>
+                <div className={styles.gotologin}>
+                    <a href="/signup" className={styles.btn03}>新規登録画面へ</a>
+                </div> 
             </form>  
         </div>
     )

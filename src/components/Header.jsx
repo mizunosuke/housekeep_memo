@@ -22,12 +22,12 @@ export const Header = (props) => {
     return (
         <div className={styles.container}>
                 <div className={styles.signoutbtn}>{/* <SignOutButton/> */}</div>
-                <div className={styles.prevbtn}><button onClick={prevMonth}>前の月へ</button></div>
+                <div className={styles.prevbtn}><button onClick={prevMonth}><a href="#" className={styles.btn02}>前の月へ</a></button></div>
                 <div className={styles.time}><h1>{year}年 {month}月の収支</h1></div>
-                <div className={styles.nextbtn}><button onClick={nextMonth}>次月へ</button></div>
+                <div className={styles.nextbtn}><button onClick={nextMonth}><a href="#" className={styles.btn02}>次の月へ</a></button></div>
                 <div className={styles.userad}>
                     <p>ようこそ！{currentUser.email}さん</p>
-                    <button onClick={signout}>Sign Out</button>
+                    <button onClick={signout}><a href="#" className={styles.btn03}>Sign Out</a></button>
                 </div>
         </div>
     )
